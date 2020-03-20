@@ -1,0 +1,32 @@
+create apps
+
+python manage.py startapp Users
+
+Registration
+
+pip3 install django-registration
+
+CSS load
+
+pip3 install django-crispy-forms
+ pip3 install -U mysqlclient
+pip3 install --user django-crispy-forms
+
+https://pypi.org/project/django-redux/
+
+
+python manage.py startapp AccountManagement
+
+
+phone number fileds
+
+pip3 install django-phone-field
+
+
+make migration
+
+python3 manage.py makemigrations AccountManagement
+
+migrate cmd
+
+python3 manage.py migrate AccountManagement

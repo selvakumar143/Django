@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Water Meter</title>
+        <link rel="icon" href="static/img/icon.png">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js'  %}"></script>
+        <!--Custom Font-->
+
+    </head>
+
+    <header>
+       <!-- Navigation -->
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+                  <img src="{% static 'images/logo.png' %}" alt="" width="170" height="36">
+                </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                      </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'registration_register' %}">Register</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'auth_logout' %}">Logout</a>
+                </li>
+                      <li class="nav-item">
+                  <a class="nav-link" href="{% url 'auth_login' %}">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+    </header>
+
+<!--    this is body section-->
+    <body class="">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </body>
+
+<!--    this is footer section-->
+  <!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold text-light">Footer text 1</h5>
+        <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
+          repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
+          harum esse fugiat. Itaque, culpa?</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold text-light">Footer text 2</h5>
+        <p class="text-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
+          commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
+          excepturi hic.</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3 text-light">© 2020 Copyright:
+    <a href="https://tealorca.com/"> Tealorca.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</html>

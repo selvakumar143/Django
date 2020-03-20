@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>This is list page</h1>
+       <table class="table">
+              <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>email</th>
+                    <th>phno</th>
+                    <th>Address</th>
+                    <th>DOB</th>
+                    <th>created</th>
+                    <th>Action</th>
+                </tr>
+              </thead>
+            <tbody>
+            {% for person in persons %}
+            <tr>
+                <td>{{person.id}}</td>
+                <td>{{person.first_name}}</td>
+                <td>{{person.last_name}}</td>
+                <td>{{person.email}}</td>
+                <td>{{person.phone}}</td>
+                <td>{{person.address}}</td>
+                <td>{{person.dob}}</td>
+                <td>{{person.created}}</td>
+                <td>
+                    <a href="{% url 'DeletePerson' person.id %}" class="btn btn-danger"></a>
+                    <a href="{% url 'UpdatePerson' person.id %}" class="btn btn-primary"></a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+{% endblock %}
